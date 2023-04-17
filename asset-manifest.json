@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gym_fit/static/css/main.a34cb35e.css",
+    "main.js": "/gym_fit/static/js/main.7e053696.js",
+    "index.html": "/gym_fit/index.html",
+    "main.a34cb35e.css.map": "/gym_fit/static/css/main.a34cb35e.css.map",
+    "main.7e053696.js.map": "/gym_fit/static/js/main.7e053696.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a34cb35e.css",
+    "static/js/main.7e053696.js"
+  ]
+}
