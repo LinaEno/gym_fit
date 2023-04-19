@@ -16,7 +16,7 @@ function onWheel(apiObj, ev) {
 
   if (ev.deltaY < 0) {
     apiObj.scrollNext();
-  } else if (ev.deltaY > 0) {
+  } else {
     apiObj.scrollPrev();
   }
 }
@@ -25,9 +25,9 @@ function LeftArrow() {
   const { isFirstItemVisible, scrollPrev } = useContext(VisibilityContext);
 
   return (
-    <Typography disabled={isFirstItemVisible} onClick={() => scrollPrev()}>
-      Left
-    </Typography>
+    <button disabled={isFirstItemVisible} onClick={() => scrollPrev()}>
+      <Typography>Left</Typography>
+    </button>
   );
 }
 
@@ -35,9 +35,9 @@ function RightArrow() {
   const { isLastItemVisible, scrollNext } = useContext(VisibilityContext);
 
   return (
-    <Typography disabled={isLastItemVisible} onClick={() => scrollNext()}>
-      Right
-    </Typography>
+    <button disabled={isLastItemVisible} onClick={() => scrollNext()}>
+      <Typography> Right</Typography>
+    </button>
   );
 }
 
@@ -45,6 +45,7 @@ const HorizontalScrollbar = ({ data, bodyParts, setBodyPart, bodyPart }) => (
   <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} onWheel={onWheel}>
     {data.map(item => (
       <Box
+        component={'div'}
         key={item.id || item}
         itemID={item.id || item}
         title={item.id || item}

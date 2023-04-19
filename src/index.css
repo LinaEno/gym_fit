@@ -11,9 +11,9 @@ body {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0px;
-}
+} */
 
 .right-arrow,
 .left-arrow {
@@ -45,10 +45,12 @@ body {
 
 .react-horizontal-scrolling-menu--wrapper {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
 }
-
+.react-horizontal-scrolling-menu--footer, .react-horizontal-scrolling-menu--header {
+  display: none;
+}
 .detail-image {
   width: 729px;
   height: 742px;
