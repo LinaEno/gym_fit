@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/gym_fit/static/css/main.5f19343b.css",
-    "main.js": "/gym_fit/static/js/main.7cb3f72d.js",
+    "main.js": "/gym_fit/static/js/main.e9446627.js",
     "index.html": "/gym_fit/index.html",
     "main.5f19343b.css.map": "/gym_fit/static/css/main.5f19343b.css.map",
-    "main.7cb3f72d.js.map": "/gym_fit/static/js/main.7cb3f72d.js.map"
+    "main.e9446627.js.map": "/gym_fit/static/js/main.e9446627.js.map"
   },
   "entrypoints": [
     "static/css/main.5f19343b.css",
-    "static/js/main.7cb3f72d.js"
+    "static/js/main.e9446627.js"
   ]
 }
