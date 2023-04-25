@@ -29,7 +29,7 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => (
       sx={{
         fontSize: { lg: '44px', xs: '25px' },
         ml: '20px',
-        mt: { lg: '100px', xs: '60px' },
+        mt: { lg: '100px', xs: '30px' },
       }}
       fontWeight={700}
       color="#000"

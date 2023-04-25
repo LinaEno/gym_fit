@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 import { Box, Typography } from '@mui/material';
 import 'react-horizontal-scrolling-menu/dist/styles.css';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 // import './hideScrollbar.css';
 
 import ExerciseCard from './ExerciseCard';
@@ -26,8 +28,8 @@ function LeftArrow() {
   const { isFirstItemVisible, scrollPrev } = useContext(VisibilityContext);
 
   return (
-    <button disabled={isFirstItemVisible} onClick={() => scrollPrev()}>
-      <Typography>Left</Typography>
+    <button style={{width: '24px', background: '#ff2625', border: '2px solid transparent'}} disabled={isFirstItemVisible} onClick={() => scrollPrev()}>
+      <Typography><ArrowBackIosIcon /></Typography>
     </button>
   );
 }
@@ -36,8 +38,8 @@ function RightArrow() {
   const { isLastItemVisible, scrollNext } = useContext(VisibilityContext);
 
   return (
-    <button disabled={isLastItemVisible} onClick={() => scrollNext()}>
-      <Typography> Right</Typography>
+    <button style={{width: '24px', background: '#ff2625', border: '2px solid transparent'}} disabled={isLastItemVisible} onClick={() => scrollNext()}>
+      <Typography> <ArrowForwardIosIcon /></Typography>
     </button>
   );
 }

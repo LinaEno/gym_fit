@@ -2,41 +2,44 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Stack } from '@mui/material';
 import logo from '../images/logo.png';
+import { useMediaQuery } from 'react-responsive';
 
-const Navbar = () => (
+const Navbar = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const isDefault = useMediaQuery({ query: '(min-width: 768px)' });
+
+  return (
   <Stack
     direction="row"
-    justifyContent="space-around"
     sx={{
       gap: { sm: '123px', xs: '40px' },
       mt: { sm: '32px', xs: '20px' },
-      justifyContent: 'none',
+      px: { sm: '40px', xs: '20px' },
+      justifyContent: 'space-between',
     }}
-    px="20px"
   >
-    <Link to="/"><img src={logo} alt="logo" height={40}/></Link>
+    
+    <Link to="/">
+    {isMobile && <img src={logo} alt="logo" height={40} />}
+    {isDefault && <img src={logo} alt="logo" height={60} />}
+    </Link>
     <Stack
       direction="row"
-      gap="40px"
+      sx={{ gap: { sm: '40px', xs: '20px' }, fontSize: { sm: '36px', xs: '24px' } }}
       fontFamily="Alegreya"
-      fontSize="24px"
-      alignItems="flex-end"
+      alignItems="center"
     >
       <Link
         to="/"
-        style={{
-          textDecoration: 'none',
-          color: '#3A1212',
-          borderBottom: '3px solid #FF2625',
-        }}
+        className="navbar__link"
       >
         Home
       </Link>
-      <a href="#exercises" style={{ textDecoration: 'none', color: '#3A1212' }}>
+      <a href="#exercises" className="navbar__link">
         Exercises
       </a>
     </Stack>
-  </Stack>
-);
+  </Stack>)
+};
 
 export default Navbar;

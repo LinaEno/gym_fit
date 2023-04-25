@@ -1,4 +1,5 @@
 import { Typography, Stack, Button } from '@mui/material';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 
 // import BodyPartImage from '../assets/icons/body-part.png';
 // import TargetImage from '../assets/icons/target.png';
@@ -24,8 +25,13 @@ const Detail = ({ exerciseDetail }) => {
 
   return (
     <Stack
-      gap="60px"
-      sx={{ flexDirection: { lg: 'row' }, p: '20px', alignItems: 'center' }}
+      sx={{
+        flexDirection: { sm: 'row' },
+        gap: { sm: '40px', xs: '30px' },
+        p: '20px',
+        pl: { sm: '60px', xs: '20px' },
+        alignItems: 'center',
+      }}
     >
       <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
       <Stack sx={{ gap: { lg: '35px', xs: '20px' } }}>
@@ -51,15 +57,15 @@ const Detail = ({ exerciseDetail }) => {
               sx={{
                 background: '#FFF2DB',
                 borderRadius: '50%',
-                width: '100px',
-                height: '100px',
+                width: { lg: 100, xs: 40 },
+                height: { lg: 100, xs: 50 },
               }}
             >
-              <img
-                src={item.icon}
-                alt={bodyPart}
-                style={{ width: '50px', height: '50px' }}
-              />
+              <FitnessCenterIcon sx={{
+                color: '#ff2625',
+                width: { lg: 42, xs: 24 },
+                height: { lg: 42, xs: 24 },
+              }}/>
             </Button>
             <Typography
               textTransform="capitalize"
