@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/gym_fit/static/css/main.5f19343b.css",
-    "main.js": "/gym_fit/static/js/main.e9446627.js",
+    "main.css": "/gym_fit/static/css/main.83f1a3ad.css",
+    "main.js": "/gym_fit/static/js/main.9836cb62.js",
+    "static/media/sport.jpg": "/gym_fit/static/media/sport.250e6e7fa7a6ed8cb15c.jpg",
+    "static/media/logo.png": "/gym_fit/static/media/logo.7df7e518ff45469f5538.png",
     "index.html": "/gym_fit/index.html",
-    "main.5f19343b.css.map": "/gym_fit/static/css/main.5f19343b.css.map",
-    "main.e9446627.js.map": "/gym_fit/static/js/main.e9446627.js.map"
+    "main.83f1a3ad.css.map": "/gym_fit/static/css/main.83f1a3ad.css.map",
+    "main.9836cb62.js.map": "/gym_fit/static/js/main.9836cb62.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f19343b.css",
-    "static/js/main.e9446627.js"
+    "static/css/main.83f1a3ad.css",
+    "static/js/main.9836cb62.js"
   ]
 }
