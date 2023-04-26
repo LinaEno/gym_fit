@@ -55,6 +55,13 @@ body {
 .detail-image {
   width: 729px;
   height: 742px;
+  box-shadow: -5px -5px  5px #ff2625;
+}
+
+@media screen and (min-width: 425px) {
+  .detail-image {
+    box-shadow: -30px -30px  10px #ff2625;
+  }
 }
 
 .hero-banner-img {
@@ -66,12 +73,43 @@ body {
   margin-top: -330px;
 }
 
+.exercise-box {
+  position: relative;
+  width: 405px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.exercise-box::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 140%;
+  background: #ff2625;
+  animation: animate 4s linear infinite;
+}
+
+.exercise-box::after {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border-radius: 20px;
+  background: #fff;
+}
+.exercise-content {
+  z-index: 10;
+}
+
 .exercise-card {
   width: 400px;
   height: 445px;
   background: #fff;
-  border-top: 4px solid #ff2625;
-  border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 16px;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
@@ -82,12 +120,49 @@ body {
 }
 
 .exercise-card img {
-  height: 326px;
+  height: 324px;
+  top: 4px;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .bodyPart-card {
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
+  position: relative;
+  z-index: 10;
+  height: 282px;
+  overflow: hidden;
+  
+}
+
+.bodyPart__image {
+  content: '';
+  position: absolute;
+  z-index: -10;
+  height: 282px;
+}
+
+.bodyPart__text {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+width: 100%;
+background: linear-gradient(
+    to top,
+    rgba(58, 18, 18, 0.5),
+    rgba(58, 18, 18, 0.8)
+  );
+  z-index: 10;
+
 }
 
 .exercise-card:hover,
@@ -105,7 +180,7 @@ body {
   flex-direction: column;
   gap: 24px;
   width: 387px;
-  height: 381px;
+  height: 321px;
   text-decoration: none;
 }
 
@@ -132,15 +207,16 @@ body {
     width: 320px;
   }
 
-  .exercise-video {
-    width: 320px;
-    height: 300px;
-  }
 }
 
 @media screen and (max-width: 400px) {
   .exercise-card {
     width: 280px;
+  }
+  
+  .exercise-video {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -155,4 +231,56 @@ br {
 .react-horizontal-scrolling-menu--scroll-container {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+.video {
+  z-index: -1;
+  height: 440px;
+}
+
+.hero__content {
+  z-index: 2;
+  background: linear-gradient(
+    to top,
+    rgba(58, 18, 18, 0.3),
+    rgba(58, 18, 18, 0.6)
+  );
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__input:hover {
+  outline: 4px solid #ff2625;
+  border-radius: 4px;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: #3A1212;
+}
+
+.navbar__link:hover {
+  color: #ff2625;
+}
+
+.hero__button {
+  margin-top: 45px;
+  margin-bottom: 45px;
+  text-decoration: none;
+  width: 200px;
+  text-align: center;
+  background: #ff2625;
+  padding: 14px;
+  font-size: 22px;
+  text-transform: none;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.hero__button:hover,
+.hero__button:focus {
+  transform: scale(1, 1);
 }

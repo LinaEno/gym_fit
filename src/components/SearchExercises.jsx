@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Button, Stack, TextField, Typography } from '@mui/material';
+import SearchIcon from "@mui/icons-material/Search";
 
 import { exerciseOptions, fetchData } from '../utils/API';
 import HorizontalScrollbar from './HorizontalScrollbar';
@@ -55,12 +56,12 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
       </Typography>
       <Box position="relative" mb="72px">
         <TextField
+        className='search__input'
           height="76px"
           sx={{
             input: { fontWeight: '700', border: 'none', borderRadius: '4px' },
-            width: { lg: '1170px', xs: '350px' },
+            width: { lg: '1170px', sm: '688px', xs: '280px' },
             backgroundColor: '#fff',
-            borderRadius: '40px',
           }}
           value={search}
           onChange={e => setSearch(e.target.value.toLowerCase())}
@@ -70,10 +71,10 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
         <Button
           className="search-btn"
           sx={{
-            bgcolor: '#0634ff',
+            bgcolor: '#FF2625',
             color: '#fff',
             textTransform: 'none',
-            width: { lg: '173px', xs: '80px' },
+            width: { lg: '173px', xs: '60px' },
             height: '56px',
             position: 'absolute',
             right: '0px',
@@ -81,10 +82,10 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           }}
           onClick={handleSearch}
         >
-          Search
+          <SearchIcon />
         </Button>
       </Box>
-      <Box sx={{ position: 'relative', width: '100%', p: '20px' }}>
+      <Box sx={{ position: 'relative', width: '100%' }}>
         <HorizontalScrollbar
           data={bodyParts}
           bodyParts

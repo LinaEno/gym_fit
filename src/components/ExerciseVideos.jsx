@@ -5,7 +5,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
   if (!exerciseVideos.length) return <Loader />;
 
   return (
-    <Box sx={{ marginTop: { lg: '203px', xs: '20px' } }} p="20px">
+    <Box sx={{ marginTop: { lg: '203px', sm: '20px' } }} p="20px">
       <Typography
         sx={{ fontSize: { lg: '44px', xs: '25px' } }}
         fontWeight={700}
@@ -13,14 +13,14 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
         mb="33px"
       >
         Watch
-        <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>
+        <span style={{  textTransform: 'capitalize' }}>
           {name}
         </span>
         exercise videos
       </Typography>
       <Stack
-        sx={{ flexDirection: { lg: 'row' }, gap: { lg: '110px', xs: '0px' } }}
-        justifyContent="flex-start"
+        sx={{ flexDirection: { lg: 'row' }, gap: { lg: '110px', sm: '40px', xs: '0px' } }}
+        justifyContent="center"
         flexWrap="wrap"
         alignItems="center"
       >
@@ -36,8 +36,8 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
               style={{ borderTopLeftRadius: '20px' }}
               src={item.video.thumbnails[0].url}
               alt={item.video.title}
-            />
-            <Box>
+            /> 
+            <Box mb='20px'>
               <Typography
                 sx={{ fontSize: { lg: '28px', xs: '18px' } }}
                 fontWeight={600}

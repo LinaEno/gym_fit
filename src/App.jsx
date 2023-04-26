@@ -6,7 +6,7 @@ import './index.css';
 import Exercise from './pages/Exercise';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 const App = () => (
   <Box width="400px" sx={{ width: { xl: '1488px' } }} m="auto">
@@ -15,7 +15,7 @@ const App = () => (
       <Route path="/" element={<Home />} />
       <Route path="/exercise/:id" element={<Exercise />} />
     </Routes>
-    <Footer />
+    {/* <Footer /> */}
   </Box>
 );
 
