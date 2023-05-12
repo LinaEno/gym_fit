@@ -140,7 +140,7 @@ body {
   z-index: 10;
   height: 282px;
   overflow: hidden;
-  
+  transition: all 0.25s ease-in-out;
 }
 
 .bodyPart__image {
@@ -260,6 +260,7 @@ br {
 .navbar__link {
   text-decoration: none;
   color: #3A1212;
+  transition: all 0.25s ease-in-out;
 }
 
 .navbar__link:hover {
@@ -278,9 +279,121 @@ br {
   text-transform: none;
   color: #fff;
   border-radius: 4px;
+  transition: all 0.25s ease-in-out;
 }
 
-.hero__button:hover,
-.hero__button:focus {
-  transform: scale(1, 1);
+.hero__button:is(:hover, :focus) {
+  transform: scale(1.1);
+}
+
+.error__box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.error__button {
+  display: block;
+  width: 200px;
+  text-align: center;
+  background: #ff2625;
+  padding: 14px;
+  font-size: 22px;
+  text-transform: none;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  margin: 0 auto;
+  transition: all 0.25s ease-in-out;
+}
+
+.error__link{
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.error__button:is(:hover, :focus) {
+  transform: scale(1.1);
+}
+
+.error__img {
+  position: absolute;
+  height: 80vh;
+}
+
+.number1 {
+  position: absolute;
+  height: 80vh;
+  animation: 2s linear 0s jump infinite;
+}
+
+.number2 {
+  position: absolute;
+  height: 80vh;
+  animation: 2s linear 1s jump infinite;
+}
+
+.number3 {
+  position: absolute;
+  height: 80vh;
+  animation: 2s linear 0.5s jump infinite;
+}
+
+.moon {
+  position: absolute;
+  height: 80vh;
+  animation: 28s linear 0s moon infinite;
+}
+
+.cloud {
+  position: absolute;
+  height: 80vh;
+  animation: 28s linear 0s fly infinite;
+
+}
+
+@keyframes jump {
+  0% {
+transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5vw);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fly {
+  0% {
+transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(40vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moon {
+  0% {
+transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(60deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
 }
