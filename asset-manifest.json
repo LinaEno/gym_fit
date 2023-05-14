@@ -1,15 +1,21 @@
 {
   "files": {
-    "main.css": "/gym_fit/static/css/main.83f1a3ad.css",
-    "main.js": "/gym_fit/static/js/main.64c699da.js",
+    "main.css": "/gym_fit/static/css/main.fce51857.css",
+    "main.js": "/gym_fit/static/js/main.37cef6f3.js",
+    "static/media/404.bg.png": "/gym_fit/static/media/404.bg.2eae7c16b05d0ee682ea.png",
     "static/media/sport.jpg": "/gym_fit/static/media/sport.250e6e7fa7a6ed8cb15c.jpg",
+    "static/media/moon.png": "/gym_fit/static/media/moon.7085ecb7edb2bf2b5fa1.png",
+    "static/media/0.png": "/gym_fit/static/media/0.d72eb9acb5ebbaabb4b0.png",
+    "static/media/4.2.png": "/gym_fit/static/media/4.2.93489bc56df5844443b2.png",
+    "static/media/4.1.png": "/gym_fit/static/media/4.1.f30ee6edc83422d9b06c.png",
+    "static/media/cloud.png": "/gym_fit/static/media/cloud.1be9b3685549f1565608.png",
     "static/media/logo.png": "/gym_fit/static/media/logo.7df7e518ff45469f5538.png",
     "index.html": "/gym_fit/index.html",
-    "main.83f1a3ad.css.map": "/gym_fit/static/css/main.83f1a3ad.css.map",
-    "main.64c699da.js.map": "/gym_fit/static/js/main.64c699da.js.map"
+    "main.fce51857.css.map": "/gym_fit/static/css/main.fce51857.css.map",
+    "main.37cef6f3.js.map": "/gym_fit/static/js/main.37cef6f3.js.map"
   },
   "entrypoints": [
-    "static/css/main.83f1a3ad.css",
-    "static/js/main.64c699da.js"
+    "static/css/main.fce51857.css",
+    "static/js/main.37cef6f3.js"
   ]
 }
